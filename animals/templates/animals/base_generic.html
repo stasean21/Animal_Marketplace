@@ -1,0 +1,26 @@
+<!-- templates/animals/base_generic.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'animals/styles.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Animal Marketplace{% endblock %}</title>
+</head>
+<body>
+
+<nav>
+    <a href="{% url 'home' %}">Главная</a>
+    <a href="{% url 'animal_list' %}">Список животных</a>
+    <a href="{% url 'add_animal' %}">Добавить животное</a>
+    <a href="{% url 'profile' %}">Профиль</a>
+    <!-- Добавьте другие ссылки, если необходимо -->
+</nav>
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

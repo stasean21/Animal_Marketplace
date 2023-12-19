@@ -1,0 +1,57 @@
+.animals-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+}
+
+.animal-card {
+  border-radius: 12px;
+  min-height: 400px;
+  width: 300px;
+  margin: 0 10px 15px 0;
+  display: flex;
+  box-shadow: 0px 5px 9px 0px #a3a3a3;
+  align-items: flex-start; /* Центрируем содержимое по вертикали */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  flex-direction: column; /* Меняем направление флекс-контейнера на колонку */
+}
+
+.animal-img {
+  width: 300px; /* Замените на нужный вам размер */
+  height: 200px; /* Замените на нужный вам размер */
+  object-fit: cover;
+}
+p {
+  margin: 10px;
+}
+.animal-name{
+  font-size: 28px;
+}
+.animal-city{
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  color: #515253;
+}
+.animal-created{
+  font-size: 20px;
+  color: #515253;
+  margin: 0px;
+  margin-left: 10px;
+}
+.animal-price{
+  font-size: 36px;
+}
+
+
+
+.link{
+  text-decoration: none;
+  color: #0099f7;
+}
+.link:hover {
+  color: #ff6163;
+}
+ .animal-img {
+    user-select: none;
+  }

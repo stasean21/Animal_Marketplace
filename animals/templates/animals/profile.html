@@ -1,0 +1,9 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <h2>Вход или регистрация </h2>
+    <!-- Ваш контент профиля здесь -->
+  <a href="{% url 'login' %}">Login</a>
+  <a href="{% url 'register' %}">Register</a>
+
+{% endblock %}

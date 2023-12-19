@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Профиль пользователя</title>
+</head>
+<body>
+    <h1>Профиль пользователя</h1>
+    <!-- Добавьте содержимое для страницы профиля пользователя -->
+    <p>Имя пользователя: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <!-- Добавьте дополнительные поля профиля, такие как фотография и описание -->
+    <p>Фотография: <img src="{{ user.profile.photo.url }}" alt="Фотография пользователя"></p>
+    <p>О себе: {{ user.profile.bio }}</p>
+
+<form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Выход">
+    </form>
+</body>
+</html>

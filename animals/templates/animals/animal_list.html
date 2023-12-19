@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'animals/base_generic.html' %}
+{% load static %}
+{% load humanize %}
+
+{{ animal.created_at|date:"d F H:i" }}
+<html>
+
+<head>
+    <title>Animal List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'animals/styles.css' %}">
+</head>
+<body>
+{% block content %}
+  <h2>Available Animals</h2>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'animals/styles.css' %}">
+  <div class="animals-container">
+{% for animal in animals %}
+    <div class="animal-card">
+      <div class="animal-details">
+        <div>
+          <img class="animal-img"src="{{ animal.image.url }}" alt="{{ animal.name }}">
+        </div>
+        <div>
+            <p class="animal-name"><a class="link" href="">{{ animal.name }}</a></p>
+            <p class="animal-price">{{ animal.price }} ₽</p>
+            <p class="animal-city">{{ animal.city }}</p>
+            <p class="animal-created">{{ animal.created_at|date:"d F H:i" }}</p>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+  </div>
+{% endblock %}
+</body>
+</html>
